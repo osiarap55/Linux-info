@@ -79,3 +79,21 @@ ls -l | grep ".txt"
 En este ejemplo, el comando `ls -l` lista los archivos en el directorio actual con información detallada, y la salida se pasa al comando `grep ".txt"`, que filtra solo las líneas que contienen la cadena ".txt". Esto puede ser útil para encontrar archivos específicos en un directorio.
 
 La canalización es una característica poderosa que permite la composición de comandos, lo que es una de las fortalezas fundamentales del sistema operativo Unix y sus derivados, como Linux.
+
+3.- En la línea de comandos de Linux, el operador `<<<` se utiliza para redirigir una cadena como entrada estándar para un comando. Esto se conoce como "here string" o cadena de aquí.
+
+La sintaxis básica es la siguiente:
+
+```bash
+comando <<< "cadena"
+```
+
+Este comando toma la cadena especificada y la utiliza como entrada estándar para el comando. Aquí tienes un ejemplo práctico:
+
+```bash
+echo "Hola, mundo" <<< cat
+```
+
+Este comando imprimirá "Hola, mundo" en la pantalla.
+
+Se usa con menos frecuencia que otras formas de redirección, pero puede ser útil en situaciones específicas donde deseas proporcionar una cadena como entrada para un comando en lugar de un archivo o la entrada estándar directa.
